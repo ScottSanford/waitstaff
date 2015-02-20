@@ -1,0 +1,96 @@
+.container {
+	width:1024px;
+	padding-bottom:25px;
+	margin-top: 25px;
+}
+
+.page-header {
+	border-bottom: 2px solid #eee;
+	margin-top:25px;
+}
+
+.h1 {
+	text-align: center;
+	font-weight: 300;
+}
+
+.links {
+	font-size: 1.2em;
+}
+
+.header {
+	display: block;
+	padding: 20px 10px;
+	border-bottom: 1px solid rgba(0,0,0,.1);
+	background: rgba(248,248,248,.9);
+	font-size: 25px;
+	font-weight: 300;
+	color: #232323;
+}
+
+.home-text {
+	font-size: 1.3em;
+}
+
+label {
+	margin-bottom: 25px;
+}
+
+hr {
+	margin-top: 0;
+	margin-bottom: 10px;
+	border-top: 3px solid #eee;
+}
+
+.error {
+	color:red;
+	font-style: italic;
+	font-weight: 300;
+}
+
+#my-earnings {
+	margin-top: 20px;
+}
+
+.output {
+	position: relative;
+	top:9px;
+}
+
+#customer-charges {
+	margin-top: 70px;
+}
+
+#customer-charges fieldset, #my-earnings fieldset {
+	padding-top: 10px;
+}
+
+@media (max-width: 768px) {
+
+	#customer-charges {
+		margin-top: 20px;
+	}
+	
+}
+
+.home.ng-enter {
+	-webkit-animation: fadeIn 0.5s;
+	-moz-animation: fadeIn 0.5s;
+	-o-animation: fadeIn 0.5s;
+	animation: fadeIn 0.5s;
+}
+
+.new-meal.ng-enter {
+	-webkit-animation: zoomIn 0.5s;
+	-moz-animation: zoomIn 0.5s;
+	-o-animation: zoomIn 0.5s;
+	animation: zoomIn 0.5s;
+}
+
+.my-earnings.ng-enter {
+	-webkit-animation: fadeInUp 0.5s;
+	-moz-animation: fadeInUp 0.5s;
+	-o-animation: fadeInUp 0.5s;
+	animation: fadeInUp 0.5s;
+}
+

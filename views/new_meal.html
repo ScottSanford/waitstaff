@@ -1,0 +1,100 @@
+<div class="row">
+
+		<!--Start of Meal Details -->
+
+		<div id="meal-details" class="col-xs-12 col-sm-5 col-sm-offset-1">
+				<form name="formDetails" id="sky-form" class="sky-form" novalidate>
+					<header>Enter the Meal Details</header>
+					
+					<fieldset>					
+						<section>
+							<div class="row">
+								<label class="label col col-5">Base Meal Price</label>
+								<div class="col col-7">
+									<label class="input">
+										<i class="icon-prepend fa fa-dollar"></i>
+										<input name="baseMealPrice" type="number"  step="0.01" min="0" ng-model="baseMealPrice" required>
+									 	<div ng-if="formDetails.$submitted" ng-messages="formDetails.baseMealPrice.$error">
+				    						<span ng-message="required" class="error">Please enter your meal price!</span>
+				 						</div>
+									</label>
+								</div>
+							</div>
+						</section>
+						
+						<section>
+							<div class="row">
+								<label class="label col col-5">Tax Rate</label>
+								<div class="col col-7">
+									<label class="input">
+										<i class="icon-prepend">%</i>
+										<input name="taxRate" type="number"  step="0.01" min="0" ng-model="taxRate" required>
+										<div ng-if="formDetails.$submitted" ng-messages="formDetails.taxRate.$error">
+				    						<span ng-message="required" class="error">Please enter your tax rate!</span>
+				 						</div>
+									</label>
+								</div>
+							</div>
+						</section>
+
+						<section>
+							<div class="row">
+								<label class="label col col-5">Tip Percentage</label>
+								<div class="col col-7">
+									<label class="input">
+										<i class="icon-prepend">%</i>
+										<input name="tipPercentage" type="number" step="0.01" min="0" ng-model="tipPercentage" required>
+										<div ng-if="formDetails.$submitted" ng-messages="formDetails.tipPercentage.$error">
+				    						<span ng-message="required" class="error">Please enter your tip rate!</span>
+				 						</div>
+									</label>
+								</div>
+							</div>
+						</section>
+					
+					</fieldset>
+
+					<footer>
+						<button type="submit" class="button" ng-click="addMeal()">Submit</button>
+						<button type="button" class="button button-secondary" ng-click="cancelForm()">Cancel</button>
+					</footer>
+
+				</form>			
+		</div>	
+
+		<!-- End of Meal Details -->
+			
+		<!-- Start of Customer Charges -->
+
+		<div id="customer-charges" class="col-xs-12 col-sm-4 col-sm-offset-1">
+
+			<form action="" id="sky-form" class="sky-form">
+
+				<header>Customer Charges</header>
+						
+				<fieldset>
+					<section>
+						<label class="label col col-9" for="base-meal-price">Subtotal</label>	
+						<div class="output">{{ charges.subtotal | currency }}</div>
+					</section>
+					
+					<section>
+						<label class="label col col-9" for="tax-rate">Tip</label>	
+						<div class="output">{{ charges.tip | currency }}</div>
+					</section>
+
+					<hr>
+					
+					<section>
+						<label class="label col col-9" for="tip-percentage">Total</label>	
+						<div class="output">{{ charges.total | currency }}</div>
+					</section>
+				</fieldset>
+
+			</form>
+
+		</div>
+
+			<!-- End of Customer Charges -->
+
+</div>

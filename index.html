@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Waitstaff Calculator</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="css/sky-forms.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" href="css/styles.css">
+
+
+</head>
+<body>
+	
+	<div class="container-fluid">
+	
+		<div class="page-header">
+			<h1 class="h1">Waitstaff Caclulator</h1>
+
+			<div class="text-center links">
+            	<a href="#/" class="link">Home</a> | <a href="#/new_meal" class="link">New Meal</a> | <a href="#/my_earnings" class="link">My Earnings</a>
+        	</div>
+
+		</div>
+
+			<!-- My Earnings Info -->
+	<div ng-view class="{{viewClass}}"></div>	
+
+	</div> <!-- end of container-fluid -->
+
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/ngMessages.js"></script>
+	<script type="text/javascript" src="js/angular-route.js"></script>
+	<script type="text/javascript" src="js/angular-animate.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="js/services/new-meal-service.js"></script>
+	<script type="text/javascript" src="js/services/my-earnings-service.js"></script>
+	
+</body>
+</html>
